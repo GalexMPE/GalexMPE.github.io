@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tractări Auto [Numele Firmei]</title>
+    <style>
+        /* Resetari si stiluri de baza */
+        body, h1, h2, p, ul, table { margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Navigare */
+        .navbar {
+            background-color: #fff;
+            padding: 15px 0;
+            border-bottom: 1px solid #e7e7e7;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #005A9C;
+        }
+        .navbar nav a {
+            color: #555;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: 500;
+        }
+        .navbar nav a:hover {
+            color: #005A9C;
+        }
+
+        /* Sectiunea principala (Hero) */
+        .hero {
+            background-color: #fff;
+            padding: 40px 0;
+        }
+        .hero .grid {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        .hero .left-column {
+            flex: 1;
+            min-width: 300px;
+        }
+        .hero .right-column {
+            flex: 1.5;
+            display: block;
+        }
+        .hero .right-column img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Calculator Tarife Box */
+        .calculator-box {
+            background-color: #fdfdfd;
+            border: 1px solid #e9e9e9;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .tabs {
+            display: flex;
+            background-color: #f7f7f7;
+        }
+        .tab-button {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            color: #888;
+            border-bottom: 3px solid transparent;
+        }
+        .tab-button.active {
+            color: #333;
+            border-bottom: 3px solid #007bff;
+        }
+        .tab-content {
+            padding: 20px;
+        }
+        .tab-pane {
+            display: none;
+        }
+        .tab-pane.active {
+            display: block;
+        }
+
+        /* Tabel Tarife */
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .price-table th, .price-table td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .price-table td:last-child {
+            text-align: right;
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        /* Butoane */
+        .actions {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .btn {
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+        }
+        .btn-green {
+            background-color: #5cb85c;
+        }
+        .btn-orange {
+            background-color: #f0ad4e;
+        }
+
+        /* Sectiune Servicii (Iconite) */
+        .services-bar {
+            padding: 30px 0;
+            background-color: #fff;
+            margin-top: 40px;
+        }
+        .services-grid {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .service-icon {
+            text-align: center;
+            color: #555;
+            flex: 1;
+            padding: 10px;
+        }
+        .service-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: #007bff;
+        }
+        .service-icon .logo-icon {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            margin-top: 40px;
+        }
+        .contact-info {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #f0ad4e;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero .grid {
+                flex-direction: column;
+            }
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .services-grid {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">[Numele Firmei]</div>
+            <nav>
+                <a href="#tarife-oras">Tractări Oraș</a>
+                <a href="#">Tractări Țară</a>
+                <a href="#">Asistență Rutieră</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="container grid">
+            <div class="left-column">
+                <div class="calculator-box">
+                    <div class="tabs">
+                        <button class="tab-button active" onclick="openTab(event, 'TarifeOras')">Tarife pe Oraș</button>
+                        <button class="tab-button" onclick="openTab(event, 'CalculatorIntercity')">Calculator InterCity</button>
+                    </div>
+
+                    <div id="TarifeOras" class="tab-content tab-pane active">
+                        <h3>Prețuri Tractări București</h3>
+                        <table class="price-table">
+                            <tbody>
+                                <tr>
+                                    <td>Tractări între 800 - 1000 kg</td>
+                                    <td>89 LEI</td>
+                                </tr>
+                                <tr>
+                                    <td>Tractări între 1001 - 1500 kg</td>
+                                    <td>130 LEI</td>
+                                </tr>
+                                <tr>
+                                    <td>Tractări între 1501 - 2000 kg</td>
+                                    <td>150 LEI</td>
+                                </tr>
+                                <tr>
+                                    <td>Tractări între 2001 - 3500 kg</td>
+                                    <td>150-350 LEI</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="actions">
+                            <a href="tel:07xxxxxxxx" class="btn btn-green">CONTACTEAZĂ</a>
+                            <a href="#tarife-oras" class="btn btn-orange">CALCULEAZĂ TARIF</a>
+                        </div>
+                    </div>
+
+                    <div id="CalculatorIntercity" class="tab-content tab-pane">
+                        <h3>Calculator Tarife Intercity</h3>
+                        <p>Această funcționalitate este în curs de dezvoltare. Vă rugăm să ne contactați telefonic pentru o ofertă exactă.</p>
+                         <div class="actions">
+                            <a href="tel:07xxxxxxxx" class="btn btn-green">SUNA ACUM</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-column">
+                <img src="https://placehold.co/600x400/e0e0e0/757575?text=Imagine+Reprezentativa" alt="Femeie cu pana la masina">
+            </div>
+        </div>
+    </main>
+
+    <section class="services-bar">
+        <div class="container services-grid">
+            <div class="service-icon">
+                <svg viewBox="0 0 24 24"><path d="M18.5 6C19.88 6 21 7.12 21 8.5V11H19V9H5V11H3V8.5C3 7.12 4.12 6 5.5 6H18.5M5 3C6.1 3 7 3.9 7 5H3V3.5C3 3.22 3.22 3 3.5 3H5M19 3H20.5C20.78 3 21 3.22 21 3.5V5H17C17 3.9 17.9 3 19 3M18 13H22L19 19H5L2 13H6V12H18V13M7.5 14C8.33 14 9 14.67 9 15.5C9 16.33 8.33 17 7.5 17C6.67 17 6 16.33 6 15.5C6 14.67 6.67 14 7.5 14M16.5 14C17.33 14 18 14.67 18 15.5C18 16.33 17.33 17 16.5 17C15.67 17 15 16.33 15 15.5C15 14.67 15.67 14 16.5 14Z"></path></svg>
+                <p>Tractare Auto</p>
+            </div>
+            <div class="service-icon">
+                 <svg viewBox="0 0 24 24"><path d="M20,8H4V6H20V8M20,12H4V10H20V12M20,16H4V14H20V16M22,2H2V4H22V2M11.95,21.95C12.78,21.2 15.9,18.5 15.9,15.9C15.9,14.24 14.56,12.9 12.9,12.9C11.24,12.9 9.9,14.24 9.9,15.9C9.9,18.55 11.22,21.2 11.95,21.95Z"></path></svg>
+                <p>Depanare</p>
+            </div>
+            <div class="service-icon logo-icon">
+                [LOGO]
+            </div>
+            <div class="service-icon">
+                 <svg viewBox="0 0 24 24"><path d="M17,18H21V16H17V14L14,17.5L17,21V18M11,4H13V9L11,11V4M11,13H13V15H11V13M4,2H20A2,2 0 0,1 22,4V13.54C21.41,13.19 20.73,13 20,13A4,4 0 0,0 16,17A4,4 0 0,0 20,21C20.73,21 21.41,20.81 22,20.46V22A2,2 0 0,1 20,24H4A2,2 0 0,1 2,22V4A2,2 0 0,1 4,2Z"></path></svg>
+                <p>Curent Baterie</p>
+            </div>
+            <div class="service-icon">
+                 <svg viewBox="0 0 24 24"><path d="M12,2C6.5,2 2,6.5 2,12C2,17.5 6.5,22 12,22C17.5,22 22,17.5 22,12C22,6.5 17.5,2 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M16.24,7.76L11,13L8.76,10.76L7.76,11.76L11,15L17.24,8.76L16.24,7.76Z"></path></svg>
+                <p>Schimb Roată</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2025 [Numele Firmei] | Toate drepturile rezervate.</p>
+        <p class="contact-info">Contact non-stop: 07xx xxx xxx</p>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-pane");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+</body>
+</html>
