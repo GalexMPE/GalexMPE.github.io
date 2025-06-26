@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prezentarea Proiectului: Platformă mobilă autonomă</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            overflow: hidden;
+            padding: 0;
+        }
+        header {
+            background: #212529;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem; /* Redus de la 3rem pentru a încape pe un rând */
+            letter-spacing: 1.5px;
+            white-space: nowrap; /* Asigură că textul rămâne pe un singur rând */
+            overflow: hidden; /* Ascunde textul care depășește lățimea */
+            text-overflow: ellipsis; /* Afișează "..." dacă textul este trunchiat */
+        }
+        header p {
+            font-size: 1rem; /* Redus de la 1.2rem pentru a fi mai mic */
+            margin-top: 8px; /* Ajustat ușor marginea superioară */
+            color: #adb5bd;
+        }
+        section {
+            padding: 30px;
+            margin-bottom: 25px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease-in-out;
+        }
+        section:hover {
+            transform: translateY(-5px);
+        }
+        section h2 {
+            color: #007bff;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+            text-align: center;
+        }
+        section h3 {
+            color: #495057;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+            border-left: 5px solid #007bff;
+            padding-left: 10px;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 25px;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease-in-out;
+        }
+        .image-gallery img:hover {
+            transform: scale(1.02);
+        }
+        .image-gallery.small img {
+            width: 300px;
+            max-width: 100%;
+            height: auto;
+        }
+        ul {
+            list-style: disc;
+            margin-left: 25px;
+            padding-left: 0;
+        }
+        ol {
+            list-style: decimal;
+            margin-left: 25px;
+            padding-left: 0;
+        }
+        ul li, ol li {
+            margin-bottom: 10px;
+        }
+        b {
+            font-weight: 700;
+            color: #0056b3;
+        }
+        .highlight {
+            background-color: #d1ecf1;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #0c5460;
+        }
+        .youtube-embed {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            margin-top: 25px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        .youtube-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Prezentarea Proiectului: Platformă mobilă autonomă</h1>
+            <p>GHIMPETEANU ALEXANDRU-ANDREI</p>
+            <p>201R</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="introducere">
+            <h2>1. Introducere</h2>
+            <div class="image-gallery">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Imagine%20Robot.png?raw=true" alt="Imagine Robot">
+            </div>
+            <ul>
+                <li><b>Titlu:</b> "Proiect: Platformă mobilă autonomă"</li>
+                <li><b>Obiectiv:</b> Construirea unui robot capabil să urmeze o linie în mod automat și să fie controlat manual printr-o aplicație mobilă.</li>
+                <li><b>Elemente principale:</b> Design mecanic, electronică, codificare, aplicație mobilă.</li>
+            </ul>
+        </section>
+
+        <section id="design-mecanic">
+            <h2>2. Design-ul Mecanic</h2>
+            <h3>FreeCAD</h3>
+            <ul>
+                <li><b>Instrument:</b> Am folosit FreeCAD pentru a proiecta componentele mecanice ale robotului.</li>
+                <li><b>Componente create:</b>
+                    <ul>
+                        <li>Roțile robotului.</li>
+                        <li>Carcasa bateriei.</li>
+                        <li>Capacul pentru carcasa principală.</li>
+                    </ul>
+                </li>
+                <li><b>Cum am învățat:</b> Am urmat cursuri online și tutoriale de pe YouTube, inclusiv cele oferite de FabLab, unde am învățat concepte de bază pentru modelarea 3D.</li>
+            </ul>
+            <div class="image-gallery small">
+            </div>
+            <div class="image-gallery small">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Piesa%201%20FreeCAD.png?raw=true" alt="Piesa 1 FreeCAD">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Piesa%202%20FreeCAD.png?raw=true" alt="Piesa 2 FreeCAD">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Piesa%203%20FreeCAD.png.png?raw=true" alt="Piesa 3 FreeCAD">
+            </div>
+            <h3>Piese Proiectate în FreeCAD:</h3>
+            <ul>
+                <li><b>Capac Baterie (Sus-Stânga):</b> Sigilează bateria, include găuri pentru șuruburi și oferă acces rapid.</li>
+                <li><b>Roată Motor TT (Sus-Dreapta):</b> Design anti-derapant pentru o mai bună tracțiune. Slot central pentru fixare pe axul motorului.</li>
+                <li><b>Carcasă cu Suporturi (Jos):</b> Integrează bateria, motoarele, senzorii și placa PCB. Prevăzută cu spațiu pentru cabluri și prindere sigură.</li>
+                <li><b>Proces:</b> Proiectare 3D în FreeCAD și imprimare 3D cu Flsun Super Racer. Material: PLA, pentru rezistență și precizie.</li>
+            </ul>
+            <h3>Asamblarea Robotului (Assembly-ul)</h3>
+            <p>După imprimarea 3D a pieselor, am asamblat toate componentele:</p>
+            <ul>
+                <li>Carcasa baterie.</li>
+                <li>Roțile pentru motoarele TT.</li>
+                <li>Capacul pentru carcasă.</li>
+                <li>Placa de bază ESP32.</li>
+                <li>Senzorii infraroșii și senzorul ultrasonic.</li>
+                <li>Motoarele și driverul DRV8833.</li>
+                <li>Modulul bateriei.</li>
+            </ul>
+            <h3>Imprimanta 3D</h3>
+            <ul>
+                <li><b>Model:</b> Flsun Super Racer.</li>
+                <li><b>Motiv pentru alegere:</b> Viteză mare de imprimare și precizie ridicată.</li>
+                <li><b>Material folosit:</b> PLA pentru piese mecanice.</li>
+            </ul>
+            <div class="image-gallery">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Asamblare%20Robot.png?raw=true" alt="Asamblare Robot">
+            </div>
+        </section>
+
+        <section id="design-electronic">
+            <h2>3. Design-ul Electronic</h2>
+            <h3>EasyEDA</h3>
+            <ul>
+                <li><b>Instrument:</b> EasyEDA pentru proiectarea circuitelor electronice.</li>
+                <li><b>Cum am învățat:</b> Am urmat tutorialele oferite de echipa EasyEDA pentru a învăța să creez schematice și footprint-uri pentru componente care nu erau în librăria implicită.</li>
+            </ul>
+            <h3>Divizor de tensiune:</h3>
+            <ul>
+                <li><b>Necesitate:</b> Pinul Echo al senzorului ultrasonic funcționează la 5V, dar ESP32 acceptă maxim 3.3V.</li>
+                <li><b>Soluție:</b> Divizor de tensiune realizat cu:
+                    <ul>
+                        <li>R1 = 1 kΩ.</li>
+                        <li>R2 = 10 kΩ.</li>
+                    </ul>
+                </li>
+                <li><b>Funcție:</b> Reduce tensiunea la un nivel sigur pentru ESP32.</li>
+            </ul>
+            <div class="image-gallery">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Schema%20Electronic%C4%83%20EasyEDA.png?raw=true" alt="Schema Electronică EasyEDA">
+            </div>
+            <h3>Footprint-uri și asocierea cu componentele</h3>
+            <ul>
+                <li>Am folosit Footprint Manager din EasyEDA pentru a lega componentele din schematic cu layout-ul lor fizic.</li>
+                <li><b>Pași:</b> Tools → Footprint Manager → Selectare componentă → Alegere footprint → Confirmare.</li>
+                <li>Am creat footprint-uri personalizate pentru componente indisponibile, urmând dimensiunile din datasheet.</li>
+            </ul>
+            <h3>Plasarea și trasarea conexiunilor</h3>
+            <ul>
+                <li>Componentele au fost plasate pe PCB în funcție de fluxul curentului și organizare logică.</li>
+                <li>Am trasat firele folosind Track Tool, având grijă să:
+                    <ul>
+                        <li>Utilizez trasee late pentru alimentare.</li>
+                        <li>Verific conexiunile cu Design Rule Check (DRC).</li>
+                    </ul>
+                </li>
+                <li>Export final în format Gerber pentru fabricație.</li>
+            </ul>
+            <div class="image-gallery">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Layout%20PCB%20EasyEDA.png?raw=true" alt="Layout PCB EasyEDA">
+            </div>
+        </section>
+
+        <section id="programare-cod">
+            <h2>4. Programarea și Codul</h2>
+            <h3>Arduino</h3>
+            <ul>
+                <li><b>Cod pentru ESP32:</b> Am implementat funcționalități pentru:
+                    <ul>
+                        <li>Urmărirea liniei folosind senzori infraroșii.</li>
+                        <li>Detectarea obstacolelor folosind un senzor ultrasonic.</li>
+                    </ul>
+                </li>
+                <li>Control manual prin aplicația mobilă.</li>
+                <li><b>Surse de învățare:</b>
+                    <ul>
+                        <li>Am utilizat inteligența artificială pentru a scrie și depana codul.</li>
+                        <li>Am ajustat și personalizat codul pentru cerințele proiectului, învățând multe aspecte legate de programarea Arduino și gestionarea senzorilor.</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="image-gallery">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Cablaj%20pe%20Breadboard.png?raw=true" alt="Cablaj pe Breadboard">
+            </div>
+        </section>
+
+        <section id="aplicatie-mobila">
+            <h2>5. Programarea și Codul (Cea mai Rapidă Metodă)</h2>
+            <h3>Aplicația mobilă RemoteXY</h3>
+            <ul>
+                <li><b>Instrument:</b> Site-ul RemoteXY.</li>
+                <li><b>Cum funcționează aplicația:</b>
+                    <ul>
+                        <li>Aplicația permite comutarea între două moduri:
+                            <ul>
+                                <li><b>Mod automat:</b> Robotul urmează o linie și evită obstacolele.</li>
+                                <li><b>Mod manual:</b> Robotul poate fi controlat cu butoane pentru deplasare înainte, înapoi, stânga și dreapta.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><b>Proces:</b> Am creat interfața grafică direct pe site, am descărcat codul generat și l-am integrat cu proiectul.</li>
+            </ul>
+            <div class="image-gallery">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Interfa%C8%9B%C4%83%20RemoteXY.png?raw=true" alt="Interfață RemoteXY">
+            </div>
+        </section>
+
+        <section id="dezvoltare-pcb">
+            <h2>6. Design și Proiectare Placă de Bază (PCB) cu EasyEDA</h2>
+            <div class="image-gallery">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Robot%20Prezentare%202.png?raw=true" alt="Robot Prezentare 2">
+            </div>
+            <p>A trebuit să regândesc tot circuitul robotului (cu o atenție desăvârșită, de data aceasta cu o experiență mai mare). Am eficientizat traseul pentru o îmbunătățire drastică a designului și a performanței plăcii.</p>
+            <p>Am mărit traseele și le-am delimitat între ele astfel încât să pot ulterior pune designul final la CNC și să nu existe erori. Am mărit traseele obișnuite la 1 mm, iar cele de Vcc, 3V3, GND la 1,5 mm.</p>
+            <div class="image-gallery">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/PCB%20Re-design%20EasyEDA.png?raw=true" alt="PCB Re-design EasyEDA">
+            </div>
+            <div class="image-gallery">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Detalii%20PCB%20Re-design.png?raw=true" alt="Detalii PCB Re-design">
+            </div>
+            <h3>Greșeli inițiale la CNC:</h3>
+            <ul>
+                <li>O eroare majoră a fost legată de traseele proiectate inițial, care nu fuseseră suficient de bine gândite.</li>
+                <li>Acestea treceau prin pinii ESP-ului, făcând imposibilă realizarea lor de către freza CNC fără suprapuneri.</li>
+                <li><b>Corectarea erorilor:</b> În imaginea din dreapta sunt evidențiate câteva găuri forate incorect, ceea ce m-a obligat să ocolesc aceste zone și să regândesc traseele afectate.</li>
+            </ul>
+            <div class="image-gallery">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Erori%20ini%C8%9Biale%20PCB.png?raw=true" alt="Erori inițiale PCB">
+            </div>
+        </section>
+
+        <section id="fabricare-pcb">
+            <h2>7. Fabricarea PCB-ului – De la Digital la Fizic cu CNC și FlatCAM</h2>
+            <div class="image-gallery">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/FlatCAM%20PCB%20Preview.png?raw=true" alt="FlatCAM PCB Preview">
+            </div>
+            <ul>
+                <li><b>Exportul fișierului Gerber:</b> Am încărcat fișierul Gerber din EasyEDA (File -> Export -> PCB Fabrication -> Export Gerber), apoi toate fișierele necesare în FlatCAM (File -> Open -> Open Gerber/Excellon).</li>
+                <li><b>Probleme cu prinderea plăcii:</b> Inițial am intenționat să fac două găuri în placă pentru a o prinde mai bine pe CNC, dar am renunțat la idee deoarece acest lucru putea afecta bit-ul (de aceea există două găuri mari în partea de jos).</li>
+                <li><b>Fixarea plăcii:</b> Am lipit placa de cupru pe CNC folosind o bandă dublu adezivă, care, spre surprinderea mea, a funcționat foarte bine.</li>
+                <li><b>Configurarea zonei de lucru:</b> Am configurat zona de lucru pentru imprimantă, setând coordonatele X și Y (colțul stânga jos) ca punct de pornire.</li>
+                <li><b>Setarea axei Z:</b> Axa Z a fost setată prin apropierea bit-ului cât mai mult de placă și folosirea unei foi de hârtie pentru a evita contactul direct.</li>
+                <li>Metoda este corectă dacă puteți trage foaia fără ca aceasta să se rupă. (Mai multe imagini la final).</li>
+            </ul>
+            <div class="image-gallery small">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Excellon%20Object.png?raw=true" alt="Excellon Object">
+            </div>
+            <ul>
+                <li><b>Probleme cu dimensiunea găurilor:</b> Am întâmpinat probleme legate de dimensiunea găurilor, necesitând ajustarea acestora prin Excellon Editor.</li>
+                <li><b>Redimensionarea găurilor:</b> Am redimensionat valoarea găurilor care erau aproximativ egale.</li>
+                <li><b>Setările de foraj:</b> Am selectat dimensiunea găurilor dorite, dimensiunea burghiului și opțiunea "Mill Drills".</li>
+                <li>Apoi, am setat adâncimea de foraj și am activat "multi-depth" pentru o mișcare circulară și mai fină a burghiului, înainte de a apăsa butonul de generare a codului CNC.</li>
+            </ul>
+            <div class="image-gallery small">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Excellon%20Editor%201.png?raw=true" alt="Excellon Editor 1">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Excellon%20Editor%202.png?raw=true" alt="Excellon Editor 2">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Excellon%20Editor%203.png?raw=true" alt="Excellon Editor 3">
+            </div>
+            <div class="image-gallery small">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Calculator%20FlatCAM.png?raw=true" alt="Calculator FlatCAM">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Parameters%20Tool%201.png?raw=true" alt="Parameters Tool 1">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Geometry%20Settings.png?raw=true" alt="Geometry Settings">
+            </div>
+            <ul>
+                <li><b>Realizarea traseelor:</b> Pentru a realiza traseele pe fața și spatele plăcii, trebuie accesată opțiunea "Isolating Routing", apoi se calculează adâncimea dorită (recomandat să se înceapă cu o valoare mică, ex: −0.5, apoi să se mărească gradual spre −0.9 dacă este necesar).</li>
+                <li><b>Setarea diametrului sculei:</b> Apoi, se introduce rezultatul de la "tool diameter" așa cum este exemplificat în imagine (diametrul pentru bit-ul V trebuie ajustat).</li>
+                <li><b>Geometrie:</b> Pentru geometrie, este foarte important ca "V-tip Dia" să fie modificat la 0.2 mm pentru a obține valoarea dorită a "Cut Z".</li>
+            </ul>
+            <div class="image-gallery small">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Trasee%20ASA%20DA.png?raw=true" alt="Trasee ASA DA">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Trasee%20ASA%20NU.png?raw=true" alt="Trasee ASA NU">
+            </div>
+            <ul>
+                <li><b>Verificarea traseelor:</b> Este crucial să ne asigurăm că freza trece de cel puțin o dată (recomandat de două ori) fără să se suprapună cu alte trasee.</li>
+                <li><span class="highlight">ASA DA!</span></li>
+                <li><span class="highlight">ASA NU!</span></li>
+            </ul>
+            <div class="image-gallery small">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Mirror%20Operation.png?raw=true" alt="Mirror Operation">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Bottom%20Layer%20Inverted.png?raw=true" alt="Bottom Layer Inverted">
+            </div>
+            <ul>
+                <li><b>Inversarea Bottom Layer-ului:</b> Pentru a inversa "Bottom Layer-ul", trebuie să accesați "Tool" -> "2 Sided PCB".</li>
+                <li><b>Setările de inversare:</b> Apoi, selectați "Y" și "Point" și introduceți jumătatea valorii plăcii pe axa X.</li>
+            </ul>
+        </section>
+
+        <section id="asamblare-componente">
+            <h2>8. Asamblarea Componentelor</h2>
+            <ul>
+                <li><b>Lipirea componentelor:</b> Lipirea componentelor SMD și/sau THT (through-hole) pe placa de bază.</li>
+                <li><b>Tehnici de lipire:</b>
+                    <ul>
+                        <li>Letcon clasic cu fludor.</li>
+                        <li>Pistolul cu aer cald a fost folosit pentru componentele cu mulți pini (ex: ESP32) și a ajutat la dezlipirea/lipirea eficientă.</li>
+                    </ul>
+                </li>
+                <li><b>Traseele de tip "via":</b> Am trecut un fir de cupru prin "via" și l-am lipit pe ambele fețe cu fludor pentru a asigura conexiunile între straturile PCB-ului.</li>
+                <li><b>Dificultăți întâmpinate:</b>
+                    <ul>
+                        <li><b>Lipirea ESP-ului:</b> Cea mai dificilă și de finețe operațiune a fost lipirea ESP-ului.</li>
+                        <li>A fost necesar să dezlipesc pinii de pe ESP pentru a-i lipi prima dată pe placă.</li>
+                        <li>Apoi a trebuit să creez găuri în locul pinilor scoși (majoritatea găurilor extrase fiind acoperite de fludor).</li>
+                        <li>Ulterior, am așezat ESP-ul pe pini și l-am lipit.</li>
+                    </ul>
+                </li>
+                <li><b>Probleme comune:</b> Lipituri reci, scurtcircuite între pini apropiați, supraîncălzirea componentelor, dificultatea dezlipirii componentelor cu mulți pini fără a deteriora placa.</li>
+            </ul>
+            <div class="image-gallery">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/PCB%20Asamblat.png?raw=true" alt="PCB Asamblat">
+            </div>
+        </section>
+
+        <section id="control-robot">
+            <h2>8. Controlul Robotului – De la Limitările RemoteXY la Flexibilitatea unui Web Server</h2>
+            <h3>Experiența inițială cu RemoteXY:</h3>
+            <ul>
+                <li><b>Avantaje:</b> Rapiditate în implementare, ușurință pentru proiecte simple.</li>
+                <li><b>Dezavantaje/Limitări:</b> Numărul limitat de butoane în versiunea gratuită, rigiditatea interfeței.</li>
+            </ul>
+            <p><b>Decizia de a trece la o soluție personalizată:</b> un server web găzduit pe ESP32.</p>
+            <h3>Avantajele serverului web:</h3>
+            <ul>
+                <li>Control total asupra designului interfeței.</li>
+                <li>Număr nelimitat de elemente de control.</li>
+                <li>Accesibilitate de pe orice dispozitiv cu browser (telefon, laptop).</li>
+                <li>Nu necesită o aplicație terță.</li>
+            </ul>
+            <h3>Dificultăți întâmpinate:</h3>
+            <ul>
+                <li>Complexitatea inițială a creării serverului web, învățarea bazelor de HTML/CSS/JavaScript pentru interfață, gestionarea comunicării asincrone.</li>
+            </ul>
+            <h3>Controlul asupra robotului:</h3>
+            <ul>
+                <li>Trebuie accesată rețeaua Wi-Fi a robotului.</li>
+                <li><b>Parola:</b> 12345678</li>
+                <li>Apoi trebuie introdusă adresa IP 192.168.4.1 în browser.</li>
+                <li>Se poate alimenta și de la telefon (cablu de la telefon la ESP).</li>
+            </ul>
+            <div class="image-gallery">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Interfa%C8%9B%C4%83%20Control%20Web%201.png?raw=true" alt="Interfață Control Web 1">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Interfa%C8%9B%C4%83%20Control%20Web%202.png?raw=true" alt="Interfață Control Web 2">
+            </div>
+            <div class="image-gallery">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Robot%20Final.png?raw=true" alt="Robot Final">
+            </div>
+        </section>
+
+        <section id="concluzii">
+            <h2>9. Concluzii și Lecții Învățate</h2>
+            <h3>Cunoștințe dobândite:</h3>
+            <ul>
+                <li>Modelare 3D cu FreeCAD.</li>
+                <li>Asamblarea pieselor și înțelegerea mecanicii de bază.</li>
+                <li>Proiectarea circuitelor electronice cu EasyEDA.</li>
+                <li>Programarea microcontrolerelor și integrarea aplicațiilor mobile.</li>
+            </ul>
+            <ul>
+                <li><b>Rezultate:</b> Robotul construit funcționează conform așteptărilor, având ambele moduri operaționale implementate cu succes.</li>
+            </ul>
+            <h3>Importanța planificării detaliate:</h3>
+            <ul>
+                <li>Un design meticulos al PCB-ului și o planificare atentă a traseelor sunt esențiale pentru a evita erorile costisitoare și a asigura succesul fabricării.</li>
+            </ul>
+            <h3>Flexibilitatea soluțiilor personalizate:</h3>
+            <ul>
+                <li>Trecerea de la RemoteXY la un server web pe ESP32 a demonstrat avantajele controlului total asupra interfeței și adaptabilității proiectului.</li>
+            </ul>
+            <h3>Depășirea provocărilor tehnice:</h3>
+            <ul>
+                <li>Dificultățile întâmpinate, de la lipirea componentelor SMD la gestionarea comunicației web, au contribuit la o înțelegere mai profundă a proceselor și la dezvoltarea abilităților practice.</li>
+            </ul>
+            <h3>Continuarea învățării:</h3>
+            <ul>
+                <li>Fiecare problemă rezolvată a adus noi cunoștințe și a consolidat experiența în dezvoltarea sistemelor electronice și a roboticii.</li>
+            </ul>
+            <h3>Satisfacția de a vedea proiectul funcțional:</h3>
+            <ul>
+                <li>În ciuda provocărilor, funcționarea robotului și controlul său prin intermediul serverului web personalizat reprezintă o realizare semnificativă și o motivație pentru proiecte viitoare.</li>
+            </ul>
+        </section>
+
+        <section id="anexe">
+            <h2>Anexe:</h2>
+            <h3>Aplicația mobilă RemoteXY:</h3>
+            <ul>
+                <li><a href="https://remotexy.com/" target="_blank">https://remotexy.com/</a></li>
+            </ul>
+            <h3>Documentație YouTube:</h3>
+            <ul>
+                <li><b>FreeCAD:</b> <a href="https://www.youtube.com/watch?v=E14m5hf6Pvo&list=PLvYFiDTG74hrGN8h51IQZte2KRc4TnZep" target="_blank">https://www.youtube.com/watch?v=E14m5hf6Pvo&list=PLvYFiDTG74hrGN8h51IQZte2KRc4TnZep</a></li>
+                <li><b>EasyEDA:</b> <a href="https://www.youtube.com/watch?v=utBQqcuOt9U&t=431s" target="_blank">https://www.youtube.com/watch?v=utBQqcuOt9U&t=431s</a></li>
+                <li><b>FlatCAM:</b> <a href="https://www.youtube.com/watch?v=8cGf6NvubFk&t=793s" target="_blank">https://www.youtube.com/watch?v=8cGf6NvubFk&t=793s</a></li>
+            </ul>
+            <h3>Proces de printare:</h3>
+            <div class="image-gallery">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Imprimanta%203D%20%C3%AEn%20lucru.png?raw=true" alt="Imprimanta 3D în lucru">
+            </div>
+            <h3>Anexe Imagini:</h3>
+            <div class="image-gallery">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Rezultat%20final%20CNC.png?raw=true" alt="Rezultat final CNC">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Coordonate%20CNC.png?raw=true" alt="Coordonate CNC">
+                <img src="https://github.com/GalexMPE/GalexMPE.github.io/blob/main/Proces%20CNC.png?raw=true" alt="Proces CNC">
+            </div>
+            <ul>
+                <li>Coordonate pe care le-am folosit</li>
+                <li>Proces CNC</li>
+                <li>Rezultat final CNC</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
